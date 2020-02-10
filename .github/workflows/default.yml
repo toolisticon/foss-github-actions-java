@@ -32,15 +32,10 @@ jobs:
       run: chmod +x ./mvnw
 
     - name: Build
-      run: ./mvnw clean package
-
-    - name: Run integration tests
-      run: ./mvnw -Pitest
-
-    - name: Create reports
-      run: ./mvnw -DskipTests verify
+      run: ./mvnw clean verify
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1.0.2
       with:
         token: ${{secrets.CODECOV_TOKEN}}
+        file: library/target/site/jacoco/jacoco.xml
