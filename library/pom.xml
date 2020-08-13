@@ -5,10 +5,13 @@
   <parent>
     <groupId>io.toolisticon.githubactions</groupId>
     <artifactId>github-actions-java-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
   </parent>
 
   <artifactId>github-actions-java</artifactId>
   <packaging>jar</packaging>
 
+  <properties>
+    <jacoco.skip>false</jacoco.skip>
+  </properties>
 </project>

@@ -4,7 +4,7 @@
 
   <groupId>io.toolisticon.githubactions</groupId>
   <artifactId>github-actions-java-parent</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <name>${project.artifactId}</name>
   <description>FOSS Demo Library Parent</description>
   <url>https://github.com/toolisticon/github-actions-java/</url>
@@ -82,6 +82,13 @@
               <id>pre-integration-test</id>
               <goals>
                 <goal>prepare-agent-integration</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>report</id>
+              <phase>test</phase>
+              <goals>
+                <goal>report</goal>
               </goals>
             </execution>
           </executions>
